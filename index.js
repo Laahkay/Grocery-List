@@ -2,27 +2,26 @@ var groceryList = [{name:'hfhg', price:20 , quantity: 2}]
 var total= 0
 
 // Create a function that adds to groceryList:
-const addToGroceryList = (groceryList) => {
+const addToGroceryList = (item) => {
 // code in here
-groceryList.name = "{Pap";
-groceryList.price = 20
-groceryList.quantity = '1}'
+groceryList.push(item)
 }
-addToGroceryList(groceryList)
-// addToGroceryList({name:'Pap', price:20 , quantity: 1})
+
+addToGroceryList({name:'Pap', price:20 , quantity: 1})
 
 //output: groceryList must be [{name:'hfhg', price:20 , quantity: 2} , {name:'Pap', price:20 , quantity: 1}]
 
 
 // Create a function that removes items based on index groceryList:
-removeBasedOnIndex =(groceryList) =>{
- // code in here
- for (var groceryList = 0 ; groceryList < 1; groceryList++){
-console.log(groceryList[1])
- }
-}
+function removeBasedOnIndex(index){
+    // code in here
 
-removeBasedOnIndex(0)
+
+   return groceryList.splice(index, 1)
+
+}
+console.log(removeBasedOnIndex(0))
+
 // output: groceryList must be [{name:'Pop', price:20 , quantity: 1}]
 
 
@@ -30,13 +29,13 @@ removeBasedOnIndex(0)
 const calculateTotal = () =>{
 // code in here
 groceryList.forEach(item => {
-    total += item.price 
+    total += item.price * item.quantity
 })
 return total
 }
 
-// function must return 20
-console.log(calculateTotal())
+// // function must return 20
+console.log("total",calculateTotal())
 
 
-console.log(groceryList)
+// console.log(groceryList)
