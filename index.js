@@ -15,13 +15,13 @@ addToGroceryList({name:'Pap', price:20 , quantity: 1})
 // Create a function that removes items based on index groceryList:
 function removeBasedOnIndex(index){
     // code in here
-    console.log('groceryList11111', groceryList)
+    console.log('Answer', groceryList)
 
    return groceryList.splice(index, 1)
 
 }
-console.log(removeBasedOnIndex(0))
-console.log('groceryList22222', groceryList)
+console.log(removeBasedOnIndex(groceryList[0]))
+console.log('Answer', groceryList)
 // output: groceryList must be [{name:'Pop', price:20 , quantity: 1}]
 
 
@@ -29,7 +29,7 @@ console.log('groceryList22222', groceryList)
 const calculateTotal = () =>{
 // code in here
 groceryList.forEach(item => {
-    total += item.price 
+    total += item.price * item.quantity
 })
 return total
 }
