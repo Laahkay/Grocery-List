@@ -29,7 +29,7 @@ console.log('groceryList22222', groceryList)
 const calculateTotal = () =>{
 // code in here
 groceryList.forEach(item => {
-    total += item.price * item.quantity
+    total += item.price 
 })
 return total
 }
